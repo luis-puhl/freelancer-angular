@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/RX';
 
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
-import { FirebaseError } from 'firebase';
 
 export class PortifolioProject {
     constructor (

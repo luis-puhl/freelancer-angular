@@ -8,6 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { PortifolioComponent } from './portifolio/portifolio.component';
 
 import { AngularFireModule } from 'angularfire2';
+import { ContactComponent } from './contact/contact.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -23,7 +24,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     NavigationComponent,
-    PortifolioComponent
+    PortifolioComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
