@@ -1,0 +1,34 @@
+{
+	"portfolios": [
+		{
+			"portifolio-modal": "#portfolioModal1",
+			"img": "img/portfolio/cabin.png",
+			"title": "Cabin"
+		},
+		{
+			"portifolio-modal": "#portfolioModal2",
+			"img": "img/portfolio/cake.png",
+			"title": "Slice of cake"
+		},
+		{
+			"portifolio-modal": "#portfolioModal3",
+			"img": "img/portfolio/circus.png",
+			"title": "Circus tent"
+		},
+		{
+			"portifolio-modal": "#portfolioModal4",
+			"img": "img/portfolio/game.png",
+			"title": "Game controller"
+		},
+		{
+			"portifolio-modal": "#portfolioModal5",
+			"img": "img/portfolio/safe.png",
+			"title": "Safe"
+		},
+		{
+			"portifolio-modal": "#portfolioModal6",
+			"img": "img/portfolio/submarine.png",
+			"title": "Submarine"
+		}
+	]
+}
