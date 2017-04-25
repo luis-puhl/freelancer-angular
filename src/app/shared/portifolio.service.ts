@@ -7,17 +7,18 @@ import { FirebaseError } from 'firebase';
 export class PortifolioProject {
     constructor (
         public title: string,
+        public text: string,
         public img: string
     ) { }
 }
 
 export const MOCK_PORTFOLIO: PortifolioProject[] = [
-    new PortifolioProject('Cabin',				'/img/portfolio/cabin.png'),
-    new PortifolioProject('Slice of cake',		'/img/portfolio/cake.png'),
-    new PortifolioProject('Circus tent',		'/img/portfolio/circus.png'),
-    new PortifolioProject('Game controller',	'/img/portfolio/game.png'),
-    new PortifolioProject('Safe',				'/img/portfolio/safe.png'),
-    new PortifolioProject('Submarine',			'/img/portfolio/submarine.png'),
+    new PortifolioProject('Cabin',						'',	'/img/portfolio/cabin.png'),
+    new PortifolioProject('Slice of cake',		'',	'/img/portfolio/cake.png'),
+    new PortifolioProject('Circus tent',			'',	'/img/portfolio/circus.png'),
+    new PortifolioProject('Game controller',	'',	'/img/portfolio/game.png'),
+    new PortifolioProject('Safe',							'',	'/img/portfolio/safe.png'),
+    new PortifolioProject('Submarine',				'',	'/img/portfolio/submarine.png'),
 ];
 
 @Injectable()
@@ -40,14 +41,15 @@ export class PortifolioService {
     newPortfolioItem(item: PortifolioProject): string {
         const postListRef = this.angularFire.database.list('/portifolio-projects');
         const newPostRef = postListRef.push({
-                'img': item.img,
-                'title': item.title
+                'title': item.title,
+                'text': item.text,
+                'img': item.img
         });
         return newPostRef.ref.toString();
     }
 
     addShittoServer() {
-        MOCK_PORTFOLIO.forEach(item => this.newPortfolioItem(item));
+      MOCK_PORTFOLIO.forEach(item => this.newPortfolioItem(item));
     }
 
 }

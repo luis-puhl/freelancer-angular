@@ -8,7 +8,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 portfolio-item" *ngFor="let item of itens">
+            <div *ngFor="let item of itens"
+                class="col-sm-4 portfolio-item">
                 <a href="#{{ getModalId(item) }}" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
@@ -22,4 +23,34 @@
     </div>
 </section>
 
-<button type="button" (click)="addShitToServer()">Add Shit to server</button>
+<!-- 
+<button type="button" (click)="addShitToServer()">Add Shit to the server</button>
+-->
+
+<!-- Portfolio Modals -->
+<div *ngFor="let item of itens"
+    class="portfolio-modal modal fade" [id]="getModalId(item)" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>{{ item.title }}</h2>
+                        <hr class="star-primary">
+                        <img src="{{ item.img }}" class="img-responsive img-centered" alt="">
+                        <p>
+                            {{ item.text }}
+                        </p>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
